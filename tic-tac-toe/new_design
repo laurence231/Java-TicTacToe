@@ -1,0 +1,31 @@
+New OOP design and improvements to TTT game:
+
+Single responsibility principle - each CLASS does only one thing
+
+Board
+    -CreateBoard(n x n)
+    -PrintBoard
+    -ReturnCellValue
+
+WinCondition(Board)
+    -GameWon
+        -private Diag
+        -private Col
+        -private Row
+
+Player(interface?)
+   HumanPlayer implements Player
+   ComputerPlayer implements Player
+
+HumanPlayer(Board) 
+-TakeTurn
+
+ComputerPlayer(Board)
+-TakeTurn (with AI logic)
+
+
+GameRunner(Board, WinCondition, HumanPlayer, ComputerPlayer)
+-'X' or 'O' take turn
+-Check win conditions
+-Switch player
+
